@@ -63,14 +63,14 @@
             //    let dx = a.x - b.x;
             //   let dy = a.y - b.y;
 
-            //    let dx = a.x * b.x;
-            //    let dy = a.y * b.y;
+               let dx = a.x * b.x;
+               let dy = a.y * b.y;
 
             //    let dx = a.x + b.x;
             //    let dy = a.y + b.y;
 
-               let dx = a.x & b.y;
-               let dy = a.y - b.x;
+            //    let dx = a.x & b.y;
+            //    let dy = a.y - b.x;
 
                console.log(dx,dy);
                let d = Math.sqrt(dx**2 + dy**2);
@@ -78,11 +78,11 @@
 
             //    if (d < 0 && d < 80) {
 
-            //    if (d < 0 ** d < 80) {
+               if (d < 0 ** d < 80) {
 
             //    if (d < 10 ** d < 100) {
             
-                  if (d < 0 ** d < 50) {
+                //   if (d < 0 ** d < 50) {
 
                    let f = g / d;
                    fx += f * dx;
@@ -92,14 +92,14 @@
         //    a.vx = (a.vx + fx) * .5;
         //    a.vy = (a.vy + fy) * .5;
 
-        //    a.vx = (a.vx - fx) + .5;
-        //    a.vy = (a.vy - fy) + .5;
+           a.vx = (a.vx - fx) + .5;
+           a.vy = (a.vy - fy) + .5;
 
         //    a.vx = (a.vx * fx) - .5;
         //    a.vy = (a.vy * fy) - .5;
 
-           a.vx = (a.vx - fx) * .5;
-           a.vy = (a.vy - fy) * .5;
+        //    a.vx = (a.vx - fx) * .5;
+        //    a.vy = (a.vy - fy) * .5;
 
            a.x += a.vx;
            a.y += a.vy;
@@ -122,6 +122,10 @@ let blue = create(400,"blue");
    let loop = () => {
         //Update Model
         rule(green,green,-.1);
+        // rule(red,red,-.1);
+        // rule(purple,purple,-.1);
+        // rule(blue,blue,-.1);
+        // rule(blue,purple,-.1);
         //Clear Room
         c.clearRect(0,0,500,500);
         drawAll();
