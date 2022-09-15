@@ -111,6 +111,7 @@ let green = create(100,"green");
 let purple = create(200,"purple");
 let red = create(300,"red");
 let blue = create(400,"blue");
+let yellow = create(500,"yellow");
 
    let drawAll = () => {
    for (i in atoms) draw(atoms[i].x,
@@ -121,13 +122,13 @@ let blue = create(400,"blue");
 
    let loop = () => {
         //Update Model
-        rule(green,green,-.1);
-        // rule(red,red,-.1);
-        // rule(purple,purple,-.1);
-        // rule(blue,blue,-.1);
-        // rule(blue,purple,-.1);
+        rule(green,.3,-9);
+        rule(red,10,-.20);
+        rule(purple,.4,-.20);
+        rule(blue,-4,-.7);
+        rule(yellow,2,-3);
         //Clear Room
-        c.clearRect(0,0,500,500);
+        c.clearRect(1,1,1,1);
         drawAll();
         requestAnimationFrame(loop);
    }
