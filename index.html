@@ -123,17 +123,17 @@ let yellow = create(500,"yellow");
    let loop = () => {
         //Update Model
         rule(green,.3,-9);
-        rule(red,10,-.20);
+        rule(red,.10,-.20);
         rule(purple,.4,-.20);
-        rule(blue,-4,-.7);
-        rule(yellow,2,-3);
+        rule(blue,-.4,-.7);
+        rule(yellow,.2,-3);
         //Clear Room
         c.clearRect(1,1,1,1);
-        drawAll();
+        drawAll(5, 10, -20);
         requestAnimationFrame(loop);
    }
 
-   loop();
+   loop(-2);
 
 </script>
 
